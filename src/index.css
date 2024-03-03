@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: aquamarine; */
+  background-image: linear-gradient(rgba(0, 255, 234, 0.5), rgba(60, 255, 0, 0.5)),
+                  url("/fondoIRRADIA.png");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes blur {
+  to {
+    backdrop-filter: blur(20px);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0);
+    padding: 0.25rem 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(229, 229, 229);
+    border-radius: 9999px;
+  }
+}
+
+nav {
+  animation: nav-shadown 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes nav-shadown {
+  to {
+    @apply shadow-lg ring-1 backdrop-blur bg-gray-500/60 dark:bg-gray-800/60 ring-white/10;
+  }
+}
