@@ -21,7 +21,8 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "path-to-regexp": "6.2.1"
+    "path-to-regexp": "6.2.1",
+    "react-floating-whatsapp": "^5.0.8"
   },
   "peerDependencies": {
     "react": "18.2.0",
