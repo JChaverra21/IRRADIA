@@ -50,21 +50,21 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900/80 fixed w-full top-0 z-10">
+    <nav className="bg-white border-gray-200 dark:bg-slate-400/60 fixed w-full top-0 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
+        <Link
+          to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
+            src="logo-irradia.png"
+            className="h-16"
+            alt="IRRADIA Logo"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white transition hover:text-yellow-500 dark:hover:text-yellow-400">
             IRRADIA
           </span>
-        </a>
+        </Link>
         <button
           onClick={toggleMobileMenu}
           type="button"
@@ -95,22 +95,12 @@ const Navbar = () => {
           }`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
-            <li>
-              <Link
-                to="/"
-                /* className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" */
-                aria-current="page"
-                className="block py-2 px-3 transition text-white hover:text-yellow-500 dark:hover:text-yellow-400 navbar-link"
-              >
-                Inicio
-              </Link>
-            </li>
+          <ul className="text-xl font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
             <li>
               <Link
                 to="/services"
                 /* className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" */
-                className="block py-2 px-3 transition text-white hover:text-yellow-500 dark:hover:text-yellow-400 navbar-link"
+                className="block py-2 px-3 transition hover:text-yellow-500 dark:hover:text-yellow-400 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent navbar-link"
               >
                 Servicios
               </Link>
@@ -119,7 +109,7 @@ const Navbar = () => {
               <Link
                 to="/products"
                 /* className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" */
-                className="block py-2 px-3 transition text-white hover:text-yellow-500 dark:hover:text-yellow-400 navbar-link"
+                className="block py-2 px-3 transition hover:text-yellow-500 dark:hover:text-yellow-400 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent navbar-link"
               >
                 Productos
               </Link>
@@ -134,12 +124,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              <Link
+                to="/contact"
+                className="block py-2 px-3 transition hover:text-yellow-500 dark:hover:text-yellow-400 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent navbar-link"
               >
-                Contact
-              </a>
+                Contáctanos
+              </Link>
             </li>
           </ul>
         </div>

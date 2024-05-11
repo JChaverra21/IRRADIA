@@ -36,10 +36,10 @@ const CarouselServices = ({images}) => {
   console.log("currentImage:", currentImage);
 
   return (
-    <div className="relative max-w-[1550px] mx-auto">
+    <div className="relative max-w-[1400px] mx-auto">
       {currentImage && (
         <img
-          className="w-full max-h-[400px] object-cover object-center rounded-lg"
+          className="w-full max-h-[300px] object-cover object-center rounded-lg"
           src={currentImage}
           alt={`Imagen ${currentImageIndex + 1}`}
         />
