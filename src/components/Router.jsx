@@ -2,8 +2,12 @@ import { EVENTS } from '../utils/consts.js'
 import { useState, useEffect, Children } from 'react'
 import { match } from 'path-to-regexp'
 import { getCurrentPath } from '../utils/getCurrentPath.js'
+import HomePage from '../pages/Home.jsx'
+import AboutPage from '../pages/About.jsx'
+import Product from '../pages/Product.jsx'
+import Service from '../pages/Service.jsx'
 
-export function Router ({ children, routes = [], defaultComponent: DefaultComponent = () => <h1>404</h1> }) {
+export function Router ({ children, routes = [HomePage,AboutPage,Product,Service], defaultComponent: DefaultComponent = () => <h1>404</h1> }) {
   const [currentPath, setCurrentPath] = useState(getCurrentPath())
 
   useEffect(() => {
